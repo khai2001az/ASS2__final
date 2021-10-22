@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nologin.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="icon" href="/img/logo.jpg">
+    <title>MCU Shop</title>
+</head>
+
+<body>
+    <div class="heading">
+        <div class="heading__logo">
+            <img src="./img/logo.png" alt="logo">
+        </div>
+        <a class="heading__title" href="/login" target="blank">Manage Product</a>
+    </div>
+    <div class="content">
+
+        <div class="content__header">
+            <div class="content__header--logo">
+                <img src="img/shangchi.webp" alt="">
+            </div>
+            <div class="btn-get">buy now</div>
+        </div>
+
+        <div class="grid wide ">
+            <div class="row g-3">
+                {{#each data}}
+                <div class="card col-4 me-2 ms-2" style="width: 18rem;">
+                    <img src="{{imgUrl}}" class="card-img-top max-width" alt="..." style="width: 270px; height: 270px;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{name}}</h5>
+                        <p class="card-text fs-6">Some quick example text to build on the card title and make up the
+                            bulk of
+                            the
+                            card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary">{{price}} $</a>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+
+            <section class="footer">
+                <div class="box-container">
+
+                    <div class="box">
+                        <h3>our branches</h3>
+                        <a href="#"> <i class="fas fa-arrow-right"></i> india </a>
+                        <a href="#"> <i class="fas fa-arrow-right"></i> USA </a>
+                        <a href="#"> <i class="fas fa-arrow-right"></i> france </a>
+                        <a href="#"> <i class="fas fa-arrow-right"></i> africa </a>
+                        <a href="#"> <i class="fas fa-arrow-right"></i> Japan </a>
+                    </div>
+
+                    <div class="box">
+                        <h3>quick links</h3>
+                        <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+                        <a href="#"> <i class="fas fa-arrow-right"></i> about </a>
+                        <a href="#"> <i class="fas fa-arrow-right"></i> menu </a>
+                        <a href="#"> <i class="fas fa-arrow-right"></i> review </a>
+                        <a href="#"> <i class="fas fa-arrow-right"></i> book </a>
+                    </div>
+
+                    <div class="box">
+                        <h3>contact info</h3>
+                        <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+                        <a href="#"> <i class="fas fa-phone"></i> +111-222-5555 </a>
+                        <a href="#"> <i class="fas fa-envelope"></i> khailqgch190357@fpt.edu.com </a>
+                        <a href="#"> <i class="fas fa-envelope"></i> hanoi, vietnam = $$$$ </a>
+                    </div>
+
+                    <div class="box">
+                        <h3>contact info</h3>
+                        <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                        <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                        <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                        <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+                        <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+                    </div>
+
+                </div>
+                <div class="credit"> creatd by <span>khai</span> | all rights reserved </div>
+            </section>
+        </div>
+    </div>
+
+  
+
+
+    <script src="/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

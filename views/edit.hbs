@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/edit.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="icon" href="/img/logo.jpg">
+    <title>Edit Page</title>
+</head>
+
+<body>
+    <div class="heading">
+        <div class="heading__logo">
+           <a href="/index"><img src="./img/logo.png" alt="logo"></a>
+        </div>
+        <h2 class="heading__title">Edit Product</h2>
+    </div>
+    <div style="color:red">{{errorMsg}}</div>
+
+    <div class="grid wide">
+        <div class="row">          
+            <form class="l-6 l-o-3" action="/update" method="post">
+                <input type="hidden" name="txtId" value="{{student._id}}">
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">Name</span>
+                    <input type="text" name="txtName" value="{{student.name}}" class="form-control"
+                        placeholder="Product Name" aria-label="Name" aria-describedby="basic-addon1">
+
+                </div>
+                <div class="input-group">
+                    <input type="text" name="txtPrice" value="{{student.price}}" class="form-control" placeholder="Cost"
+                        aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-text">$</span>
+                </div>
+                <div class="input-group ">
+                    <span class="input-group-text" id="basic-addon3">https://...</span>
+                    <input type="text" name="txtPicture" id="basic-url"
+                        aria-describedby="basic-addon3" placeholder="URL">
+                </div>
+                <input type="submit" class="btn btn-dark"  value="Update Prodcut">
+            </form>          
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.heading {
+    height: 60px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.heading__title {
+    width: 80px;
+    height: 50px;
+    padding-left: 10px;
+}
+
+.heading__title img {
+    width: 100%;
+    height: 100%;
+}
+
+.heading__search {
+    padding-right: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container__user {
+    user-select: none;
+    margin: 0 auto;
+}
+
+.container__btn {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 10px;
+}

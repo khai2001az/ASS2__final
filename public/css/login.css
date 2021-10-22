@@ -1,0 +1,161 @@
+/* Google font */
+
+@import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap);
+html {
+  background-image: linear-gradient(rgb(211, 207, 207), rgb(255, 255, 255));
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Quicksand";
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  background: #2c3338;
+  width: 40rem;
+  height: 40rem;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+
+.header {
+  color: #ffffff;
+  text-align: center;
+}
+
+.header__icon i {
+  font-size: 7rem;
+}
+
+.header__title {
+  font-size: 2rem;
+}
+
+.form {
+  width: 100%;
+}
+
+.form > div {
+  height: 5rem;
+  margin: 1.5rem 0;
+}
+
+.form__username,
+.form__password {
+  display: flex;
+}
+
+.form__icon {
+  font-size: 2rem;
+  background: #363b41;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__icon i {
+  color: #606468;
+}
+
+.form__input {
+  width: 100%;
+  position: relative;
+}
+
+.form__input > input {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: #3b4148;
+  transition: background-color 0.4s;
+}
+.form__select select {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+}
+
+.form__input:hover > input {
+  background-color: #434a52;
+}
+
+.form__submit a,
+.form__submit input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.4s;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+}
+
+.form__submit a:hover,
+.form__submit input:hover {
+  background-color: #000;
+  transition: all 0.4s;
+}
+
+.form__submit a:hover,
+.form__submit input:hover {
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.form__submit a {
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.4s;
+  letter-spacing: 0.2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+#togglePassword {
+  position: absolute;
+  font-size: 2.5rem;
+  color: rgb(168, 161, 161);
+  top: 50%;
+  right: 1rem;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+
+.message__error {
+  font-size: 1.5rem;
+  color: rgb(248, 61, 61);
+  margin: -1rem 1rem;
+}

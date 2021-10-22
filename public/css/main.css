@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700&display=swap');
+:root {
+    --main-color: #443;
+    --boder-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+    --boder-radius-hover: 4% 95% 6% 95%/95% 4% 92% 5%;
+    --boder: .2rem solid var(--main-color);
+    --border-hover: .2rem dashed var(--main-color);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    list-style: none;
+    transition: all .2s linear;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+li {
+    list-style: none;
+}

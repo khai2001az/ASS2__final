@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="icon" href="/img/logo.jpg">
+    <title>Product Page</title>
+</head>
+
+<body>
+    <div class="heading">
+        <div class="heading__title">
+            <a href="/nologin" target="blank"><img src="./img/logo.png" alt="logo"></a>
+        </div>
+        <form class="heading__search d-flex" action="/search" method="post">
+            <input class="form-control heading__search--input" type="search" placeholder="Search" aria-label="Search" name="txtSearch">
+            <button class="btn btn-outline-light heading__search--btn" type="submit" value="Search">Search</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2 class="container__user">Hello</h2>
+  
+        <a class="btn btn-outline-dark container__btn" href="./insert">Insert here</a>
+      
+        <div class="tablecotent ">
+            <table class="table table-light">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Cost</th>
+                        <th scope="col">Img</th>
+                        <th scope="col">Option</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each data}}
+                    <tr>
+                        <td>{{name}}</td>
+                        <td>{{price}}</td>
+                        <td><img src="{{imgUrl}}" width="150px" height="100px"></td>
+                        <td>                    
+                            <a class="btn btn-outline-dark" href="/edit?id={{_id}}">Edit</a>                 
+                                              
+                            <a class="btn btn-outline-dark" href="/delete?id={{_id}}" onclick="return confirm('Are you sure')">Delete</a></td>                     
+                        <td></td>                            
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
