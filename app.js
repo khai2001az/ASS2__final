@@ -11,8 +11,6 @@ const {
     getProductById,
     deleteProduct,
     getDB,
-    insertUser,
-    getRole,
 
 } = require('./databaseHandler');
 
@@ -71,13 +69,13 @@ app.get('/delete', async(req, res) => {
     res.redirect("/");
 })
 
-app.post('/search', async(req, res) => {
-    const searchInput = req.body.txtSearch;
-    const dbo = await getDB()
-    const allProducts = await dbo.collection("SanPham").find({ name: searchInput }).toArray();
+// app.post('/search', async(req, res) => {
+//     const searchInput = req.body.txtSearch;
+//     const dbo = await getDB()
+//     const allProducts = await dbo.collection("SanPham").find({ name: searchInput }).toArray();
 
-    res.render('index', { data: allProducts })
-})
+//     res.render('index', { data: allProducts })
+// })
 
 app.get('/', async(req, res) => {
     const dbo = await getDB();
