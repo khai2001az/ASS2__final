@@ -6,17 +6,6 @@ async function getDB() {
     const dbo = client.db("KhaiDB");
     return dbo;
 }
-
-//return "-1": invalid; admin or customer
-async function getRole(nameInput, password) {
-    const dbo = await getDB();
-    const s = await dbo.collection("users").findOne({ username: nameInput, password: password });
-    if (s == null)
-        return "-1";
-    else
-        return s.role;
-}
-
 async function insertUser(newUser) {
     const dbo = await getDB();
     await dbo.collection("users").insertOne(newUser);
@@ -59,9 +48,4 @@ module.exports = {
         getProductById,
         deleteProduct,
         insertUser,
-        getRole,
-
     }
-    // exports.getDB = getDB;
-    // exports.insertStudent = insertStudent;
-    // exports.updateStudent = updateStudent;
